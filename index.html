@@ -32,6 +32,17 @@
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+        function success(url) {
+           alert("sucesso")
+            console.log(url)
+        }
+
+        function failure(e) {
+            alert("erro")
+        }
+        function teste(){
+        google.script.run.withSuccessHandler(success).withFailureHandler(failure).getProspects()}
+        
     </script>
     <meta name="google-signin-client_id" content="612781682159-cvvue298dap9tqg77oa7t4a3o7a6qscn.apps.googleusercontent.com">
     <title>Plataforma Investor</title>
@@ -43,6 +54,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             <h1>Investor App</h1>
         </div>
         <div class="card-body">
+            <button onclick="teste()">AAAA</button>
             Em Construção
             <input id="searchTextField" type="text" size="50">
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
